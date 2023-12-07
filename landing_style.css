@@ -20,6 +20,14 @@ h5,
 h6 {
 	margin: 0;
 }
+hr {
+	display: block;
+	width: 100%;
+	height: 1px;
+	border: 0;
+	margin: 40px 0;
+	background-color: #e5e5e5e5;
+}
 /*Container */
 .container {
 	width: 100%;
@@ -304,4 +312,38 @@ h6 {
 .stat_text {
 	font-size: 14px;
 	text-transform: uppercase;
+}
+/* services */
+.services {
+	display: flex;
+}
+.services_content {
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+.services_item {
+	/* flex: 1 1 0; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	position: relative;
+	min-width: 33%;
+}
+.services_icon {
+	position: absolute;
+	top: 3vh;
+	left: 2px;
+	z-index: 1;
+	transform: scale(2);
+}
+.services_title {
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+}
+.services_text {
+	font-size: 15px;
+	color: #999;
 }
