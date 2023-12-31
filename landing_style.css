@@ -252,6 +252,9 @@ hr {
 	font-size: 15px;
 	color: #999;
 }
+.section--clients {
+	background: #f5f5f5 url('images/banner-1571858.jpg');
+}
 /* card */
 .card {
 	margin-top: 80px;
@@ -461,12 +464,13 @@ hr {
 	position: relative;
 }
 .reviews_photo {
-	width: 145px;
+	width: 150px;
 	position: absolute;
 	top: 25%;
 	left: 0;
 	z-index: 1;
-	border: 2px solid #333;
+	border: 2px solid #95e1d3;
+	border-radius: 100%;
 }
 .reviews_item {
 	padding-left: 205px;
@@ -551,9 +555,94 @@ hr {
 	align-items: center;
 }
 /* works */
-.works {
+.cats {
 	display: flex;
+	justify-content: center;
 }
-.works_col {
-	flex: 1 1 0;
+
+.cats_item {
+	position: relative;
+	background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+.cats_item:hover .cats_img {
+	opacity: 0.1;
+}
+.cats_item:hover .cats_info {
+	opacity: 1;
+}
+.cats_img {
+	transition: opacity 0.2s linear;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.cats_info {
+	width: 100%;
+	padding: 0 15px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+	transform: translate3d(0, -50%, 0);
+	opacity: 0;
+	transition: opaciti 0.2s linear;
+}
+.cats_title {
+	margin-bottom: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.cats_text {
+	font-size: 15px;
+	font-weight: 300;
+	font-style: italic;
+}
+/* clients */
+.clients {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 200px;
+	margin-top: 70px;
+}
+.clients_item {
+	width: 50%;
+	padding: 0 45px 0 175px;
+	position: relative;
+	margin-bottom: 60px;
+}
+.clients_photo {
+	width: 110px;
+	height: 110px;
+
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.clients_name {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #333;
+}
+.clients_prof {
+	color: #333;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 300;
+}
+.clients_text {
+	font-size: 15px;
+	color: #616060;
+}
+.clients_text:before {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: #f38181;
+	margin: 15px 0;
 }
