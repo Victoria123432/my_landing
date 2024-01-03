@@ -758,6 +758,20 @@ hr {
 	padding-top: 65px;
 	background-color: #f8f8f8;
 }
+.footer_inner {
+	padding-bottom: 65px;
+	display: flex;
+	justify-content: space-between;
+}
+.footer_col--first {
+	width: 40%;
+}
+.footer_col--second {
+	width: 29%;
+}
+.footer_col--third {
+	width: 22%;
+}
 .footer_logo {
 	font-size: 46px;
 	font-weight: 700;
@@ -795,4 +809,119 @@ hr {
 	margin-left: 18px;
 	font-size: 18px;
 	color: #95e1d3;
+}
+.footer_title {
+	text-transform: uppercase;
+	color: #333;
+	font-size: 14px;
+	margin: 30px 0;
+}
+/* subscribe */
+
+.subscribe {
+	width: 100%;
+	min-width: 380px;
+	display: flex;
+}
+.subscribe_input {
+	width: 60%;
+	height: 40px;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	font-size: 15px;
+	font-style: italic;
+	color: #333;
+	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1;
+	border-right: 0;
+}
+.subscribe_input:focus {
+	outline: 0;
+	border-color: #95e1d3;
+}
+.subscribe_input::placeholder {
+	color: #ccc;
+}
+.subscribe_btn {
+	width: 40%;
+	font-family: 'Montserrat', sans-serif;
+	padding: 12px 30px;
+	border: 0;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	height: 40px;
+	background-color: #95e1d3;
+	cursor: pointer;
+	line-height: 1;
+
+	transition: background 0.2s linear;
+}
+.subscribe_btn:hover {
+	background-color: #46a997;
+}
+.subscribe_btn:focus {
+	outline: 0;
+}
+/* blogs */
+.blogs_item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.blogs_img {
+	width: 120px;
+	height: 80px;
+}
+.blogs_content {
+	padding-left: 20px;
+}
+.blogs_title {
+	display: block;
+	color: #333;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.5;
+	margin-bottom: 5px;
+}
+.blogs_title:hover {
+	text-decoration: underline;
+}
+.blogs_date {
+	font-size: 13;
+	color: 999;
+	font-weight: 300;
+	font-style: italic;
+}
+/* Instagram */
+.instagram {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.instagram_item {
+	width: 32%;
+	border: 1px solid #fff;
+}
+.instagram_img {
+	width: 100px;
+}
+.instagram_item img {
+	display: block;
+}
+/* Copyright */
+
+.copyright {
+	padding-top: 20px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	border-top: 1px solid #e5e5e5;
+}
+.copyright span {
+	color: #f38181;
 }
