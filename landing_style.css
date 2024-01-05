@@ -28,6 +28,10 @@ hr {
 	margin: 40px 0;
 	background-color: #e5e5e5e5;
 }
+/* page */
+.page {
+	overflow: hidden;
+}
 /*Container */
 .container {
 	width: 100%;
@@ -210,6 +214,7 @@ hr {
 /* section */
 .section {
 	padding: 80px 0;
+	overflow: hidden;
 }
 .section--dogs {
 	margin-bottom: 40px;
@@ -393,9 +398,11 @@ hr {
 }
 /* dogs */
 .dogs {
+	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 .dogs_item {
 	display: block;
@@ -485,7 +492,9 @@ hr {
 	position: relative;
 }
 .reviews_photo {
+	display: block;
 	width: 150px;
+	height: 150px;
 	position: absolute;
 	top: 25%;
 	left: 0;
@@ -568,12 +577,19 @@ hr {
 }
 /* logos */
 .animals {
+	display: block;
 	width: 100px;
+	max-width: 100%;
+	height: auto;
 }
 .logos {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 -15px;
+}
+.logos_item {
+	padding: 0 15px;
 }
 /* works */
 .cats {
@@ -671,6 +687,7 @@ hr {
 
 .blog {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .blog_item {
@@ -777,7 +794,12 @@ hr {
 .footer_inner {
 	padding-bottom: 65px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 0 -15px;
+}
+.footer_col {
+	padding: 0 15px;
 }
 .footer_col--first {
 	width: 40%;
@@ -920,7 +942,7 @@ hr {
 	justify-content: space-between;
 }
 .instagram_item {
-	width: 32%;
+	width: 33%;
 	border: 1px solid #fff;
 }
 .instagram_img {
@@ -928,6 +950,8 @@ hr {
 }
 .instagram_item img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 /* Copyright */
 
@@ -948,6 +972,10 @@ hr {
 	}
 	.intro_title {
 		font-size: 120px;
+	}
+	/* reviews */
+	.reviews_text {
+		font-size: 20px;
 	}
 }
 @media (max-width: 990px) {
@@ -978,6 +1006,42 @@ hr {
 	}
 	.services_item--border {
 		border-bottom: 0;
+	}
+	/* reviews */
+	.reviews_photo {
+		width: 130px;
+		height: 130px;
+	}
+	.reviews_item {
+		padding-left: 175px;
+	}
+	/* clients */
+	.clients {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.clients_item {
+		width: 100%;
+		padding-right: 0;
+	}
+	.clients_item:last-child {
+		margin-bottom: 0;
+	}
+	/* footer */
+	.footer_col--first {
+		width: 100px;
+	}
+	.footer_col--second,
+	.footer_col--third {
+		width: 50%;
+	}
+	/* instagram */
+	.instagram {
+		justify-content: flex-start;
+	}
+	.instagram_item {
+		width: auto;
+		border-right: 1px solid white;
 	}
 }
 @media (max-width: 770px) {
@@ -1035,6 +1099,51 @@ hr {
 	.wedo_item {
 		width: 100%;
 	}
+	/* reviews */
+	.reviews {
+		padding: 0 60px;
+	}
+	.reviews_photo {
+		position: static;
+		margin: 0 auto 20px;
+	}
+	.reviews_item {
+		padding-left: 0;
+	}
+	.reviews_text {
+		font-size: 16px;
+	}
+	.reviews_author {
+		font-size: 20px;
+	}
+	/*  cats*/
+	.cats {
+		flex-wrap: wrap;
+	}
+	.cats_col {
+		flex: none;
+		width: 50%;
+	}
+
+	/*  blog*/
+	.blog {
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.blog_item {
+		width: 100px;
+		margin-bottom: 30px;
+	}
+	.blog_item:last-child {
+		margin-bottom: 0;
+	}
+	/* footer */
+
+	.footer_col--second,
+	.footer_col--third {
+		width: 100%;
+	}
 }
 @media (max-width: 575px) {
 	/* intro */
@@ -1075,5 +1184,59 @@ hr {
 	}
 	.dogs_item--2 {
 		width: 180px;
+	}
+	/* reviews */
+	.reviews {
+		padding: 0;
+	}
+	.reviews_btn {
+		top: 18%;
+	}
+	/* logos */
+	.logos {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.logos_item {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	.animals {
+		margin: 0 auto;
+	}
+	/* cats */
+	.cats_col {
+		width: 100%;
+	}
+	/* clients */
+	.clients_photo {
+		position: static;
+	}
+	.clients_item {
+		padding-left: 0;
+		text-align: center;
+	}
+	.clients_text:before {
+		margin: 15px auto;
+	}
+	/* blogs */
+	.blogs_img {
+		width: 80px;
+		height: 50px;
+	}
+	.blogs_title {
+		font-size: 10px;
+	}
+	/* subscribe */
+	.subscribe {
+		flex-wrap: wrap;
+		max-width: none;
+	}
+	.subscribe_input,
+	.subscribe_btn {
+		width: 100%;
+	}
+	.subscribe_input {
+		border-right: 1px solid #e7e7e7;
 	}
 }
