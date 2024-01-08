@@ -664,7 +664,7 @@ hr {
 .logos_item {
 	padding: 0 15px;
 }
-/* works */
+/* cats */
 .cats {
 	display: flex;
 	justify-content: center;
@@ -684,7 +684,6 @@ hr {
 	transition: opacity 0.2s linear;
 	display: block;
 	width: 100%;
-	height: auto;
 }
 .cats_info {
 	width: 100%;
@@ -709,6 +708,7 @@ hr {
 	font-weight: 300;
 	font-style: italic;
 }
+
 /* clients */
 .clients {
 	display: flex;
@@ -1218,7 +1218,9 @@ hr {
 		flex: none;
 		width: 50%;
 	}
-
+	.cats_img--sizedown {
+		height: 398px;
+	}
 	/*  blog*/
 	.blog {
 		max-width: 380px;
