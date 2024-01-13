@@ -98,7 +98,8 @@ hr {
 	z-index: 1000;
 }
 .header.fixed {
-	background-color: #eb8b8d;
+	padding: 10px 0;
+	background-color: #e08898;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
 	position: fixed;
@@ -178,6 +179,9 @@ hr {
 	right: 15px;
 	z-index: 1;
 }
+.nav-toggle:focus {
+	outline: 0;
+}
 .nav-toggle_item {
 	display: block;
 	width: 100%;
@@ -192,17 +196,21 @@ hr {
 
 	transition: background 0.2s linear;
 }
-.nav-toddle.active .nav-toggle_item {
+
+.nav-toggle.active .nav-toggle_item {
 	background: 0;
 }
-.nav-toddle.active .nav-toggle_item:before {
+
+.nav-toggle.active .nav-toggle_item:before {
 	transform-origin: left top;
 	transform: rotate(45deg) translate3d(0px, -2px, 0);
 }
-.nav-toddle.active .nav-toggle_item:after {
+
+.nav-toggle.active .nav-toggle_item:after {
 	transform-origin: left bottom;
 	transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
+
 .nav-toggle_item:before,
 .nav-toggle_item::after {
 	content: '';
@@ -220,6 +228,7 @@ hr {
 .nav-toggle_item:after {
 	bottom: -8px;
 }
+
 /* button */
 .btn {
 	display: inline-block;
@@ -564,6 +573,9 @@ hr {
 	padding: 0 110px;
 	position: relative;
 }
+.reviews .slick-slider {
+	padding: 0 110px;
+}
 .reviews_photo {
 	display: block;
 	width: 150px;
@@ -600,16 +612,24 @@ hr {
 	margin-right: 10px;
 	background-color: #f38181;
 }
-.reviews_btn {
+
+.slick-arrow {
+	display: block;
 	font-size: 0;
 	color: transparent;
 	position: absolute;
 	top: 50%;
 	z-index: 1;
 	transform: translateY(-50%);
-}
 
-.reviews_btn::after {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.slick-arrow:focus {
+	outline: 0;
+}
+.slick-arrow::after {
 	content: '';
 	display: block;
 	width: 16px;
@@ -618,11 +638,12 @@ hr {
 	border-right: 2px solid #ccc;
 }
 
-.reviews_btn--prev {
+.slick-prev {
 	left: 0;
 	transform: rotate(225deg);
 }
-.reviews_btn--next {
+
+.slick-next {
 	right: 0;
 	transform: rotate(45deg);
 }
@@ -1136,7 +1157,10 @@ hr {
 		position: absolute;
 		top: 100%;
 		left: 0;
-		background-color: #eb8b8d;
+		background-color: #e08898;
+	}
+	.nav.active {
+		display: block;
 	}
 	.nav_link {
 		display: block;
@@ -1197,7 +1221,7 @@ hr {
 		width: 100%;
 	}
 	/* reviews */
-	.reviews {
+	.reviews .slick-slider {
 		padding: 0 60px;
 	}
 	.reviews_photo {
@@ -1284,10 +1308,10 @@ hr {
 		width: 180px;
 	}
 	/* reviews */
-	.reviews {
+	.reviews .slick-slider {
 		padding: 0;
 	}
-	.reviews_btn {
+	.slick-arrow {
 		top: 18%;
 	}
 	/* logos */

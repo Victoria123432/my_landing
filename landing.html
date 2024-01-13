@@ -13,20 +13,26 @@
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	</head>
 	<body>
-		<header class="header " id="header">
+		<header class="header" id="header">
 			<div class="container">
 				<div class="header_inner">
-					<div class="header_logo">MoGo</div>
-					<nav class="nav">
-						<a class="nav_link active" href="#">About</a>
-						<a class="nav_link" href="#">Service</a>
-						<a class="nav_link" href="#">Blog</a>
-						<a class="nav_link" href="#">Work</a>
-						<a class="nav_link" href="#">Contact</a>
+					<div class="header_logo" data-scroll="#intro">MoGo</div>
+					<nav class="nav" id="nav">
+						<a class="nav_link" href="#" data-scroll="#about">About</a>
+						<a class="nav_link" href="#" data-scroll="#services">Service</a>
+						<a class="nav_link" href="#" data-scroll="#work">Work</a>
+						<a class="nav_link" href="#" data-scroll="#blog">Blog</a>
+
+						<a class="nav_link" href="#" data-scroll="#contact">Contact</a>
 					</nav>
-					<button class="nav-toggle active" type="button">
+					<button class="nav-toggle" id="nav_toggle" type="button">
 						<span class="nav-toggle_item">Menu</span>
 					</button>
 				</div>
@@ -65,7 +71,7 @@
 					</div>
 				</div>
 			</div>
-			<section class="section">
+			<section class="section" id="about">
 				<div class="container">
 					<div class="section_header">
 						<h3 class="section_suptitle">What we do</h3>
@@ -227,7 +233,7 @@
 				</div>
 			</section>
 
-			<section class="section">
+			<section class="section" id="services">
 				<div class="container">
 					<div class="section_header">
 						<h3 class="section_suptitle">Service</h3>
@@ -247,12 +253,12 @@
 						</div>
 						<div class="wedo_item">
 							<div class="accordion">
-								<div class="accordion_item">
+								<div class="accordion_item" data-collapse="#wedo_1">
 									<div class="accordion_header">
 										<span class="material-symbols-outlined"> add_a_photo </span>
 										<div class="accordion_title">Photography</div>
 									</div>
-									<div class="accordion_content">
+									<div class="accordion_content" id="wedo_1">
 										<p>
 											Optio tempore tempore facere similique. Voluptatem ea
 											soluta velit adipisci. Earum eos magni nulla.Non modi
@@ -263,12 +269,12 @@
 									</div>
 								</div>
 
-								<div class="accordion_item active">
+								<div class="accordion_item" data-collapse="#wedo_2">
 									<div class="accordion_header">
 										<span class="material-symbols-outlined"> draw </span>
 										<div class="accordion_title">Creativity</div>
 									</div>
-									<div class="accordion_content">
+									<div class="accordion_content" id="wedo_2">
 										<p>
 											Optio tempore tempore facere similique. Voluptatem ea
 											soluta velit adipisci. Earum eos magni nulla.Non modi
@@ -279,12 +285,12 @@
 									</div>
 								</div>
 
-								<div class="accordion_item">
+								<div class="accordion_item" data-collapse="#wedo_3">
 									<div class="accordion_header">
 										<span class="material-symbols-outlined"> brush </span>
 										<div class="accordion_title">Web design</div>
 									</div>
-									<div class="accordion_content">
+									<div class="accordion_content" id="wedo_3">
 										<p>
 											Optio tempore tempore facere similique. Voluptatem ea
 											soluta velit adipisci. Earum eos magni nulla.Non modi
@@ -303,21 +309,41 @@
 			<div class="section section--gray">
 				<div class="container">
 					<div class="reviews">
-						<a class="reviews_btn reviews_btn--prev" href="">Prev</a>
-						<a class="reviews_btn reviews_btn--next" href="">Next</a>
-						<div class="reviews_item">
-							<img
-								class="reviews_photo"
-								src="images/cute-dog-headshot.jpg"
-								alt="" />
-							<div class="reviews_text">
-								Optio tempore tempore facere similique. Voluptatem ea soluta
-								velit adipisci. Earum eos magni nulla.Non modi numquam aliquam.
-								Voluptatem quis ullam. Officiis ex quasi. Delectus voluptatem
-								beatae est. Quos magni molestiae cupiditate. Dolor aut aut
-								incidunt officia.
+						<!-- <a class="reviews_btn reviews_btn--prev" href=""></a>
+						<a class="reviews_btn reviews_btn--next" href=""></a> -->
+						<div data-slider>
+							<div>
+								<div class="reviews_item">
+									<img
+										class="reviews_photo"
+										src="images/cute-dog-headshot.jpg"
+										alt="" />
+									<div class="reviews_text">
+										Optio tempore tempore facere similique. Voluptatem ea soluta
+										velit adipisci. Earum eos magni nulla.Non modi numquam
+										aliquam. Voluptatem quis ullam. Officiis ex quasi. Delectus
+										voluptatem beatae est. Quos magni molestiae cupiditate.
+										Dolor aut aut incidunt officia.
+									</div>
+									<div class="reviews_author">Jon Doc</div>
+								</div>
 							</div>
-							<div class="reviews_author">Jon Doc</div>
+							<div>
+								<div class="reviews_item">
+									<img
+										class="reviews_photo"
+										src="images/cute-dog-headshot.jpg"
+										alt="" />
+									<div class="reviews_text">
+										Optio tempore tempore facere similique. Voluptatem ea soluta
+										velit adipisci. Earum eos magni nulla.Non modi numquam
+										aliquam. Voluptatem quis ullam. Officiis ex quasi. Delectus
+										voluptatem beatae est. Quos magni molestiae cupiditate.
+										Dolor aut aut incidunt officia.
+									</div>
+									<div class="reviews_author">Jon Doc</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -456,7 +482,7 @@
 					</div>
 				</div>
 			</div>
-			<section class="section">
+			<section class="section" id="work">
 				<div class="container">
 					<div class="section_header">
 						<h3 class="section_suptitle">What we do</h3>
@@ -503,7 +529,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="cats_col ">
+					<div class="cats_col">
 						<div class="cats_item">
 							<img
 								class="cats_img"
@@ -525,6 +551,7 @@
 								<div class="cats_title">kit tu mamu maw</div>
 								<div class="cats_text">maw</div>
 							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -532,21 +559,39 @@
 			<div class="section">
 				<div class="container">
 					<div class="reviews">
-						<a class="reviews_btn reviews_btn--prev" href="">Prev</a>
-						<a class="reviews_btn reviews_btn--next" href="">Next</a>
-						<div class="reviews_item">
-							<img
-								class="reviews_photo"
-								src="images/cute-dog-headshot.jpg"
-								alt="" />
-							<div class="reviews_text">
-								Optio tempore tempore facere similique. Voluptatem ea soluta
-								velit adipisci. Earum eos magni nulla.Non modi numquam aliquam.
-								Voluptatem quis ullam. Officiis ex quasi. Delectus voluptatem
-								beatae est. Quos magni molestiae cupiditate. Dolor aut aut
-								incidunt officia.
+						<div data-slider>
+							<div>
+								<div class="reviews_item">
+									<img
+										class="reviews_photo"
+										src="images/cute-dog-headshot.jpg"
+										alt="" />
+									<div class="reviews_text">
+										Optio tempore tempore facere similique. Voluptatem ea soluta
+										velit adipisci. Earum eos magni nulla.Non modi numquam
+										aliquam. Voluptatem quis ullam. Officiis ex quasi. Delectus
+										voluptatem beatae est. Quos magni molestiae cupiditate.
+										Dolor aut aut incidunt officia.
+									</div>
+									<div class="reviews_author">Jon Doc</div>
+								</div>
 							</div>
-							<div class="reviews_author">Jon Doc</div>
+							<div>
+								<div class="reviews_item">
+									<img
+										class="reviews_photo"
+										src="images/cute-dog-headshot.jpg"
+										alt="" />
+									<div class="reviews_text">
+										Optio tempore tempore facere similique. Voluptatem ea soluta
+										velit adipisci. Earum eos magni nulla.Non modi numquam
+										aliquam. Voluptatem quis ullam. Officiis ex quasi. Delectus
+										voluptatem beatae est. Quos magni molestiae cupiditate.
+										Dolor aut aut incidunt officia.
+									</div>
+									<div class="reviews_author">Jon Doc</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -608,7 +653,7 @@
 				</div>
 			</section>
 
-			<section class="section">
+			<section class="section" id="blog">
 				<div class="container">
 					<div class="section_header">
 						<h3 class="section_suptitle">Our stories</h3>
@@ -733,7 +778,7 @@
 				</div>
 			</section>
 
-			<footer class="footer">
+			<footer class="footer" id="contact">
 				<div class="container">
 					<div class="footer_inner">
 						<div class="footer_col footer_col--first">
@@ -850,6 +895,9 @@
 			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
